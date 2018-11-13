@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="PE\PEManager.h" />
     <ClInclude Include="ProcessManager.h" />
     <ClInclude Include="RemoteIJManager.h" />
     <ClInclude Include="stdafx.h" />
@@ -154,6 +155,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="InjectTool.cpp" />
+    <ClCompile Include="PE\PEManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="ProcessManager.cpp" />
     <ClCompile Include="RemoteIJManager.cpp" />
     <ClCompile Include="stdafx.cpp">
